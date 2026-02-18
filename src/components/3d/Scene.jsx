@@ -2,11 +2,13 @@ import { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Points, PointMaterial } from '@react-three/drei';
 import * as random from 'maath/random/dist/maath-random.esm';
+import { useLocation } from 'react-router-dom';
+import ServicesBackground from './ServicesBackground';
 
 export default function Scene() {
     return (
         <group>
-            <color attach="background" args={['#050510']} />
+            <color attach="background" args={['#020617']} />
             <StarField />
         </group>
     );
@@ -31,10 +33,11 @@ function StarField(props) {
             <Points ref={ref} positions={spheres} stride={3} frustumCulled={false} {...props}>
                 <PointMaterial
                     transparent
-                    color="#38bdf8"
+                    color="#0ea5e9"
                     size={0.005}
                     sizeAttenuation={true}
                     depthWrite={false}
+                    opacity={0.4}
                 />
             </Points>
         </group>

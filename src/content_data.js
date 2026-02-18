@@ -62,15 +62,61 @@ export const content = {
         ]
     },
     blog: {
-        title: "LATEST BLOG ARTICLES",
-        featured: {
-            title: "AI-Powered Web Content Optimizer: Enhancing UX",
-            excerpt: "Creating optimized content that resonates with audiences while meeting technical requirements has become increasingly complex..."
-        },
-        topReads: [
-            "The Importance of Website Performance",
-            "The Basics of the Software Development Lifecycle",
-            "Top Web Development Programs"
+        posts: [
+            {
+                title: "7 Agentic AI Strategies to Empower Your Sales Reps in 2026",
+                category: "AGENTIC AI",
+                date: "27 NOV 2025",
+                author: "GWP Team",
+                slug: "7-agentic-ai-strategies-empower-sales-2026",
+                image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800",
+                excerpt: "Businesses leveraging agentic AI in sales saw up to 25% gains in productivity and 20% faster decision cycles (McKinsey, 2025). Picture this: AI agents operating behind the scenes..."
+            },
+            {
+                title: "RPA vs Intelligent Automation: Choosing the Right Tool for Your Business Operations",
+                category: "MICROSOFT POWER AUTOMATE",
+                date: "15 NOV 2025",
+                author: "GWP Team",
+                slug: "rpa-vs-intelligent-automation-choosing-tools",
+                image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800",
+                excerpt: "Imagine a workplace where everyday repetitive tasks are handled so efficiently and accurately that your team can concentrate solely on high-level strategic tasks..."
+            },
+            {
+                title: "60+ Brilliant App Ideas for Startups to Launch in 2026",
+                category: "MOBILE APPLICATION DEVELOPMENT",
+                date: "24 NOV 2025",
+                author: "GWP Team",
+                slug: "60-brilliant-app-ideas-startups-2026",
+                image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800",
+                excerpt: "Are you planning to build an app in 2026 but not sure what to begin with? With new problems and technological advancements, here is a list of 60+ brilliant ideas..."
+            },
+            {
+                title: "Top 6 Hiring Challenges Faced When Hiring Remote Resources in 2026",
+                category: "OUTSOURCING",
+                date: "10 NOV 2025",
+                author: "GWP Team",
+                slug: "top-6-hiring-challenges-remote-2026",
+                image: "/images/outsourcing.png",
+                excerpt: "The year 2026 is anticipated to be a pivotal year for the future of work as organizations continue to adjust to a globalized, remote-first workforce..."
+            },
+            {
+                title: "Top 10 Copilot Use Cases in 2026",
+                category: "MICROSOFT",
+                date: "10 NOV 2025",
+                author: "GWP Team",
+                slug: "top-10-copilot-use-cases-2026",
+                image: "/images/microsoft.png",
+                excerpt: "AI is no longer just a futuristic buzzword. It has become a practical part of everyday work, reshaping how we interact with productivity tools across the enterprise..."
+            },
+            {
+                title: "Top 25 Agentic AI Project Ideas You Must Build in 2026",
+                category: "ARTIFICIAL INTELLIGENCE",
+                date: "8 NOV 2025",
+                author: "GWP Team",
+                slug: "top-25-agentic-ai-project-ideas-2026",
+                image: "/images/artifucialintelligence.png",
+                excerpt: "AI agents are no longer just a trend. They are becoming the backbone of modern business innovation. To keep up with the competition, explore these 25 essential project ideas..."
+            }
         ]
     },
     career: {
@@ -156,6 +202,61 @@ export const content = {
                 items: ["Experience Studio", "Content Services", "Branding", "Games Production & Development", "Accessibility"],
                 focus: "Building human-centric digital products, experience-driven design, and inclusive branding."
             }
+        ]
+    },
+    clientSuccess: {
+        hero: {
+            title: "CLIENT SUCCESS STORIES",
+            subtitle: "Delivering Tech-Essential Solutions",
+            description: "Explore how we help our partners and customers rise above challenges and see beyond their limitations through digital engineering and enterprise modernization."
+        },
+        categories: ["All", "AI & Automation", "Cloud & Infrastructure", "Data & Analytics", "Customer Experience"],
+        caseStudies: [
+            {
+                title: "Global Retail Leader Boosts CSAT",
+                category: "AI & Automation",
+                description: "Reduced agent workload by 60% using conversational AI, significantly improving customer satisfaction scores.",
+                impact: "60% Workload Reduction",
+                client: "Global Retailer"
+            },
+            {
+                title: "Next-Gen Order Fulfillment for QSR",
+                category: "AI & Automation",
+                description: "Increased order fulfillment by 25% for a leading quick-service restaurant using a next-gen virtual agent.",
+                impact: "25% Increase in Orders",
+                client: "Leading QSR"
+            },
+            {
+                title: "Cloud Cost Optimization for Fintech",
+                category: "Cloud & Infrastructure",
+                description: "Achieved a 20% reduction in cloud infrastructure costs for a global enterprise expense management provider.",
+                impact: "20% Cost Reduction",
+                client: "Fintech Enterprise"
+            },
+            {
+                title: "Real-time Sales Insights for Retail",
+                category: "Data & Analytics",
+                description: "Deployed Google DataFlow and BigQuery to gain real-time insights from over 75,000 daily sales orders.",
+                impact: "75k+ Daily Orders Tracked",
+                client: "Multinational Retailer"
+            },
+            {
+                title: "Safe Data Foundation for Biopharma",
+                category: "Data & Analytics",
+                description: "Partnered with a global biopharma leader to power data transformation using Snowflake, ensuring a secure data foundation.",
+                impact: "Secure Data Governance",
+                client: "Global Biopharma"
+            },
+            {
+                title: "Mainframe Migration for Healthcare",
+                category: "Cloud & Infrastructure",
+                description: "Migrated mainframe systems to OutSystems for a Fortune 100 healthcare company, saving over $1M in the first year.",
+                impact: "$1M+ Annual Savings",
+                client: "Health Giant"
+            }
+        ],
+        clients: [
+            "IBM", "Microsoft", "Cisco", "Intel", "Siemens", "AstraZeneca", "GE Healthcare", "Barclays", "UBS"
         ]
     }
 };

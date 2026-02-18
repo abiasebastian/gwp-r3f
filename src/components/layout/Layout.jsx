@@ -3,6 +3,7 @@ import { Suspense } from 'react';
 import Navbar from './Navbar';
 import Scene from '../3d/Scene';
 import { Loader } from '@react-three/drei';
+import Footer from './Footer';
 
 export default function Layout({ children }) {
     return (
@@ -27,14 +28,4 @@ export default function Layout({ children }) {
             <Loader />
         </div>
     );
-}
-
-function Footer() {
-    return (
-        <footer className="w-full py-8 mt-12 border-t border-glass-border bg-black/20 backdrop-blur-sm">
-            <div className="max-w-7xl mx-auto px-6 text-center text-gray-400 text-sm">
-                <p>&copy; {new Date().getFullYear()} Global Web Production. All rights reserved.</p>
-            </div>
-        </footer>
-    )
 }
