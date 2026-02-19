@@ -47,16 +47,19 @@ export const content = {
             {
                 name: "Byron Prather",
                 role: "CEO & Founder",
+                image: "https://www.globalwebproduction.com/Assets/ByronPrather900.webp",
                 bio: "More than 20 years of experience as a Microsoft senior manager, programming digital experiences and supervising teams responsible for web development, search engine optimization and experimentation."
             },
             {
                 name: "Rajalekshmi Santha",
                 role: "Chief Technology Officer",
+                image: "https://www.globalwebproduction.com/Assets/Lekshmi_900.webp",
                 bio: "IT leader with over 17 years of experience, specialized in driving innovation, stakeholder coordination, and Salesforce management."
             },
             {
                 name: "Marty Kneeland",
                 role: "Sr. Director of Enterprise Business Development",
+                image: "https://www.globalwebproduction.com/Assets/Marty_Kneeland.jpg",
                 bio: "Over twenty years of experience delivering enterprise web and marketing programs for Microsoft and other global brands."
             }
         ]
