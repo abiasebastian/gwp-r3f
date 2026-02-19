@@ -1,6 +1,6 @@
-
 import { content } from '../content_data';
 import { motion } from 'framer-motion';
+import Hero3D from '../components/Hero3D';
 
 export default function Home() {
     const { hero, services, offerings, partners } = content.home;
@@ -8,10 +8,10 @@ export default function Home() {
     return (
         <div className="space-y-20 py-10">
             {/* Hero Section */}
-            <section className="min-h-[60vh] flex flex-col justify-center">
+            <section className="min-h-[70vh] grid md:grid-cols-2 gap-8 items-center">
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
                 >
                     <h1 className="text-5xl md:text-7xl font-display font-bold mb-4 leading-tight text-white">
@@ -20,10 +20,14 @@ export default function Home() {
                     <h2 className="text-2xl md:text-3xl text-cyan-400 font-light mb-6">
                         {hero.subtitle}
                     </h2>
-                    <p className="text-lg text-slate-300 max-w-2xl leading-relaxed">
+                    <p className="text-lg text-slate-300 max-w-xl leading-relaxed">
                         {hero.description}
                     </p>
                 </motion.div>
+
+                <div className="h-[400px] w-full relative z-0">
+                    <Hero3D />
+                </div>
             </section>
 
             {/* Services Section */}
