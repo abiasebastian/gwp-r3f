@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import Logo3D from '../Logo3D';
+import Logo from '../../assets/gwplogo.svg';
 
 const links = [
     { name: 'Home', path: '/' },
@@ -22,7 +22,7 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
                 {/* Logo on the left */}
                 <Link to="/" className="flex items-center shrink-0">
-                    <Logo3D className="w-80 h-24" />
+                    <img src={Logo} alt="Global Web Production" className="w-40 md:w-48" />
                 </Link>
 
                 {/* Desktop Menu on the right */}
