@@ -1,45 +1,63 @@
 import { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Points, PointMaterial } from '@react-three/drei';
-import * as random from 'maath/random/dist/maath-random.esm';
-import { useLocation } from 'react-router-dom';
-import ServicesBackground from './ServicesBackground';
+import { Float, Sparkles, MeshDistortMaterial, Sphere, Environment, ContactShadows } from '@react-three/drei';
 
 export default function Scene() {
     return (
         <group>
             <color attach="background" args={['#020617']} />
-            <StarField />
-        </group>
-    );
-}
 
-function StarField(props) {
-    const ref = useRef();
-    const spheres = useMemo(() => {
-        // Generate random points in a sphere
-        return random.inSphere(new Float32Array(5000), { radius: 1.5 });
-    }, []);
+            <ambientLight intensity={0.5} />
+            <directionalLight position={[10, 10, 5]} intensity={1} color="#0ea5e9" />
+            <directionalLight position={[-10, -10, -5]} intensity={0.5} color="#f472b6" />
 
-    useFrame((state, delta) => {
-        if (ref.current) {
-            ref.current.rotation.x -= delta / 10;
-            ref.current.rotation.y -= delta / 15;
-        }
-    });
+            <Float
+                speed={1.5}
+                rotationIntensity={1.5}
+                floatIntensity={2}
+                position={[2, 0, -5]}
+            >
+                <Sphere args={[1.5, 64, 64]}>
+                    <MeshDistortMaterial
+                        color="#0f172a"
+                        attach="material"
+                        distort={0.4}
+                        speed={2}
+                        roughness={0.2}
+                        metalness={0.8}
+                    />
+                </Sphere>
+            </Float>
 
-    return (
-        <group rotation={[0, 0, Math.PI / 4]}>
-            <Points ref={ref} positions={spheres} stride={3} frustumCulled={false} {...props}>
-                <PointMaterial
-                    transparent
-                    color="#0ea5e9"
-                    size={0.005}
-                    sizeAttenuation={true}
-                    depthWrite={false}
-                    opacity={0.4}
-                />
-            </Points>
+            <Float
+                speed={2}
+                rotationIntensity={2}
+                floatIntensity={1.5}
+                position={[-3, 1, -8]}
+            >
+                <Sphere args={[2, 64, 64]}>
+                    <MeshDistortMaterial
+                        color="#0f172a"
+                        attach="material"
+                        distort={0.3}
+                        speed={1.5}
+                        roughness={0.1}
+                        metalness={0.9}
+                    />
+                </Sphere>
+            </Float>
+
+            <Sparkles
+                count={200}
+                scale={15}
+                size={2}
+                speed={0.4}
+                opacity={0.3}
+                color="#38bdf8"
+            />
+
+            <ContactShadows position={[0, -3, 0]} opacity={0.5} scale={20} blur={2} far={4} />
+            <Environment preset="city" />
         </group>
     );
 }
