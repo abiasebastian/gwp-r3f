@@ -1,6 +1,5 @@
 import { content } from '../content_data';
 import { motion } from 'framer-motion';
-import Hero3D from '../components/Hero3D';
 import { Link } from 'react-router-dom';
 
 export default function Home() {
@@ -21,10 +20,7 @@ export default function Home() {
 
     return (
         <div className="relative min-h-[calc(100vh-80px)] flex flex-col justify-center py-10 lg:py-20 w-full overflow-hidden">
-            {/* Right Side 3D Globe Area */}
-            <div className="absolute top-0 right-0 w-full lg:w-3/5 h-[60vh] lg:h-full z-0 pointer-events-auto opacity-70 mt-20 lg:mt-0">
-                <Hero3D />
-            </div>
+
 
             <motion.div
                 className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 mt-10 md:mt-20 lg:mt-32"

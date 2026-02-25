@@ -1,6 +1,5 @@
 import { content } from '../content_data';
 import { motion } from 'framer-motion';
-import AlarmClockScene from '../components/three/AlarmClockScene';
 
 export default function Career() {
     const { hero, future, culture, jobs, internships } = content.career;
@@ -21,8 +20,6 @@ export default function Career() {
     return (
         <div className="relative min-h-[calc(100vh-80px)] py-10 lg:py-20 w-full overflow-hidden">
             {/* Background glowing effects */}
-            <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-cyan-600/10 rounded-full blur-[120px] pointer-events-none"></div>
-            <div className="absolute top-1/2 left-0 w-[600px] h-[600px] bg-pink-900/20 rounded-full blur-[150px] pointer-events-none"></div>
 
             <motion.div
                 initial="hidden" animate="visible" variants={staggerContainer}
@@ -49,7 +46,6 @@ export default function Career() {
                         </div>
                         <motion.div variants={fadeUp} className="relative h-[400px] lg:h-[500px] w-full">
                             <div className="absolute inset-0 bg-cyan-500/20 blur-[120px] rounded-full pointer-events-none" />
-                            <AlarmClockScene />
                         </motion.div>
                     </div>
                 </section>

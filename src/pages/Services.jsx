@@ -1,8 +1,5 @@
 import { content } from "../content_data";
 import { motion } from "framer-motion";
-import { Suspense } from "react";
-
-import ServicesIconsHub from "../components/three/ServicesIconsHub";
 
 export default function Services() {
     const { hero, categories } = content.servicesPage;
@@ -50,13 +47,6 @@ export default function Services() {
                         {hero.description}
                     </motion.p>
                 </motion.div>
-
-                {/* Right Side: 3D Model */}
-                <div className="w-full lg:w-1/2 flex justify-center lg:justify-end h-[400px] lg:h-[600px] relative">
-                    <Suspense fallback={<div className="absolute inset-0 flex items-center justify-center text-cyan-400 animate-pulse">Loading Interactive 3D...</div>}>
-                        <ServicesIconsHub />
-                    </Suspense>
-                </div>
             </section>
 
             {/* Services Grid Section */}

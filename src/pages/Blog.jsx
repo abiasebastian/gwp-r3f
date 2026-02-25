@@ -4,8 +4,6 @@ import { OrbitControls } from '@react-three/drei';
 import { motion } from 'framer-motion';
 import { content } from '../content_data';
 import BlogLetters3D from '../components/three/BlogLetters3D';
-import KnowledgeHub3D from '../components/three/KnowledgeHub3D';
-import HexBackground3D from '../components/three/HexBackground3D';
 
 const Blog = () => {
     const { posts } = content.blog;
@@ -34,7 +32,6 @@ const Blog = () => {
 
     return (
         <div className="min-h-screen text-white relative z-0">
-            <HexBackground3D />
 
             {/* Darker Overlay for readability - Softened to show more detail */}
             <div className="absolute inset-0 bg-black/40 z-[1] pointer-events-none"></div>
@@ -65,15 +62,7 @@ const Blog = () => {
 
                     {/* INTRO */}
                     <div className="flex flex-col items-center mb-16">
-                        {/* 3D Knowledge Hub Books Model */}
-                        <div className="w-full h-[180px] md:h-[220px] mb-2">
-                            <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
-                                <Suspense fallback={null}>
-                                    <KnowledgeHub3D />
-                                    <OrbitControls enableZoom={false} enablePan={false} />
-                                </Suspense>
-                            </Canvas>
-                        </div>
+
 
                         <motion.div
                             initial={{ opacity: 0, y: 10 }}

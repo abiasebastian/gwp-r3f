@@ -39,13 +39,6 @@ export default function Contact() {
                         </form>
                     </motion.div>
                 </div>
-
-                {/* Right Column: 3D Scene */}
-                <div className="order-1 lg:order-2 space-y-8">
-                    <section className="text-center">
-                        <ContactLightningScene />
-                    </section>
-                </div>
             </div>
         </div>
     );
